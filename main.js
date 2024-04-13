@@ -8,6 +8,7 @@ async function getUser(username) {
     const { data } = await axios (API_URL + username);
    // console.log(data);
     createUserCard(data);
+    getRepos(username);
  }catch(err){
     //console.log(err);
     createErrorCard("Üzgünüm aradığın kullanıcıyı bulamadım :(");
@@ -51,9 +52,7 @@ const userBio= user.bio ? `<p>${user.bio}</p>` : '';
       </li>
     </ul>
     <div class="repos" id="repos">
-      <a href="#"><i class="fa-solid fa-receipt"></i>githubProfileFinder</a>
-      <a href="#"><i class="fa-solid fa-receipt"></i>spendingCalculatorJsProject</a>
-      <a href="#"><i class="fa-solid fa-receipt"></i>weatherJsProject</a>
+      
     </div>
   </div>
     `
@@ -63,8 +62,33 @@ const userBio= user.bio ? `<p>${user.bio}</p>` : '';
 function createErrorCard(msg){
     const cardErrorHTML = `
     <div class="card">
-    <h2>Üzgünüm kral aradığın kullanıcıyı bulamadım :(</h2></div>
+    <h2> ${msg}</h2></div>
     `
 
     main.innerHTML = cardErrorHTML
+};
+
+async function getRepos(username) {
+    try{
+        const {data} = await axios(API_URL + username + "/repos")
+        //console.log(data)
+        addReposToCard(data)
+    }
+    catch(err){
+    //console.log(err)
+    createErrorCard("Üzgünüm repoları çekerken hata oldu kral :(")
+    }
+}
+
+function addReposToCard(repos){
+    const reposElement = document.getElementById("repos")
+    repos.slice(7,10).forEach((repo)=>{
+        const reposLink = document.createElement("a")
+        reposLink.href=repo.html_url
+        reposLink.target="_blank"
+        reposLink.innerHTML=`
+        <i class="fa-solid fa-receipt"></i>${repo.name}
+        `
+        reposElement.appendChild(reposLink)
+    })
 }

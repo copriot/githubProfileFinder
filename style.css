@@ -80,9 +80,10 @@ main {
 }
 
 .card img {
-  border-radius: 60px;
+  border-radius: 60px 8px 60px 8px;
   width: 200px;
   border: 8px solid var(--support-color);
+  
 }
 
 .user-info {
@@ -117,7 +118,7 @@ main {
 .card p {
     text-align: justify;
     letter-spacing: normal;
-    max-width: initial;
+    
 }
 .repos {
     display: flex;
