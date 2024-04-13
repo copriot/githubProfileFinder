@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- css-link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="user-form" id="form">
+      <input
+        type="text"
+        placeholder="Github Kullanıcısı ..."
+        autocomplete="off"
+        id="search" />
+      <button type="submit"
+        ><i class="fa-solid fa-magnifying-glass"></i
+      ></button>
+    </form>
+    <main>
+      <div class="card">
+        <img
+          src="https://avatars.githubusercontent.com/u/151377630?v=4"
+          alt="" />
+        <h1>zeki</h1>
+        <small>@copriot</small>
+        <ul class="user-info" class="info">
+          <li class="followers">
+            <i class="fa-solid fa-users">55</i>
+            <p>Followers</p>
+          </li>
+          <li class="following" class="info">
+            <i class="fa-solid fa-user-plus">67</i>
+            <p>Following</p>
+          </li>
+          <li class="repositories" class="info">
+            <i class="fa-solid fa-book">20</i>
+            <p>Repositories</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

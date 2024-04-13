@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "M PLUS 1 Code", monospace;
+
+}
+:root {
+    --first-color: #59714fdf; 
+    --second-color:#e8f355d6;
+    --border-color: #f2f1f1;
+    --support-color:#aecd25;
+}
+body {
+  display: flex;
+justify-content: center;
+align-items: center;
+margin: 1rem 0;
+position: relative;
+background-color: var(--first-color);
+flex-direction: column;
+}
+
+
+.user-form {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin: 1rem 0;
+position: relative;
+background-color: var(--second-color);
+width: 50%;
+padding: 1rem 0.5rem;
+border-radius: 8px;
+}
+.user-form input {
+outline: none;
+cursor: pointer;
+width: 100%;
+line-height: 200%;
+border: 2px solid var(--border-color);
+border-radius: 5px;
+background-color: var(--first-color);
+color: var(--border-color);
+font-size: 14px;
+padding: 0.2rem 0.5rem;
+
+}
+.user-form input:focus {
+outline: none;
+}
+.user-form input::placeholder {
+    color: var(--border-color);
+}
+.user-form button {
+    position: absolute;
+    margin-right: 8px;
+    padding: 0.2rem 0.2rem;
+    background-color: var(--first-color);
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+   
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    border:3px solid var(--second-color);
+    text-align: center;
+    color: var(--border-color);
+    padding: 0.5rem;
+    border-radius: 16px 0 16px 16px;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+
+
+.card img{
+    border-radius: 83% 0% 150% 100%;
+    width: 200px;
+    border: 8px solid var(--support-color);
+      
+ }
+
+ .user-info {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--support-color);
+    list-style: none;
+ 
+  
+ }
+.info {
+    margin: 50px;
+}
