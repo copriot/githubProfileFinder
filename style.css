@@ -1,101 +1,147 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap");
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "M PLUS 1 Code", monospace;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS 1 Code", monospace;
 }
 :root {
-    --first-color: #59714fdf; 
-    --second-color:#e8f355d6;
-    --border-color: #f2f1f1;
-    --support-color:#aecd25;
+  --first-color: #1a7d78df;
+  --second-color: #e8f3558b;
+  --border-color: #f2f1f1;
+  --support-color: #4385909e;
 }
 body {
   display: flex;
-justify-content: center;
-align-items: center;
-margin: 1rem 0;
-position: relative;
-background-color: var(--first-color);
-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  position: relative;
+  background-color: var(--first-color);
+  flex-direction: column;
 }
-
 
 .user-form {
-display: flex;
-justify-content: flex-end;
-align-items: center;
-margin: 1rem 0;
-position: relative;
-background-color: var(--second-color);
-width: 50%;
-padding: 1rem 0.5rem;
-border-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem 0;
+  position: relative;
+  background-color: var(--second-color);
+  width: 60%;
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+  max-width: 600px;
 }
 .user-form input {
-outline: none;
-cursor: pointer;
-width: 100%;
-line-height: 200%;
-border: 2px solid var(--border-color);
-border-radius: 5px;
-background-color: var(--first-color);
-color: var(--border-color);
-font-size: 14px;
-padding: 0.2rem 0.5rem;
-
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  line-height: 200%;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--first-color);
+  color: var(--border-color);
+  font-size: 14px;
+  padding: 0.2rem 0.5rem;
 }
 .user-form input:focus {
-outline: none;
+  outline: none;
 }
 .user-form input::placeholder {
-    color: var(--border-color);
+  color: var(--border-color);
 }
 .user-form button {
-    position: absolute;
-    margin-right: 8px;
-    padding: 0.2rem 0.2rem;
-    background-color: var(--first-color);
-    border: 1px solid var(--border-color);
-    color: var(--border-color);
-    border-radius: 4px;
-    cursor: pointer;
-   
+  position: absolute;
+  margin-right: 8px;
+  padding: 0.2rem 0.2rem;
+  background-color: var(--first-color);
+  border: 1px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
 }
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
 }
-.card{
-    border:3px solid var(--second-color);
-    text-align: center;
-    color: var(--border-color);
-    padding: 0.5rem;
-    border-radius: 16px 0 16px 16px;
-    margin-top: 1rem;
-    width: 100%;
+.card {
+  border: 3px solid var(--border-color);
+  text-align: center;
+  background-color: var(--second-color);
+  color: var(--border-color);
+  padding: 0.5rem;
+  border-radius: 16px 16px 16px 16px;
+  margin: auto;
+  width: 330px;
+  box-shadow: 0px 2px 27px 9px var(--second-color);
 }
 
+.card img {
+  border-radius: 60px;
+  width: 200px;
+  border: 8px solid var(--support-color);
+}
 
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.card img{
-    border-radius: 83% 0% 150% 100%;
-    width: 200px;
-    border: 8px solid var(--support-color);
-      
- }
-
- .user-info {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--support-color);
-    list-style: none;
- 
-  
- }
+  list-style: none;
+}
 .info {
-    margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 10px;
+  background-color: var(--support-color);
+  width: 80px;
+  padding: 5px;
+  border-radius: 7px;
+
+}
+.card small{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--support-color);
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+.card p {
+    text-align: justify;
+    letter-spacing: normal;
+    max-width: initial;
+}
+.repos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding: 8px;
+   
+
+}
+.repos i{
+    color: var(--border-color);
+    margin-right: 5px;
+
+}
+.repos a{
+    display: inline-block;
+    border: 2px solid var(--border-color);
+    text-decoration: none;
+    color: var(--border-color);
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+.repos a:hover{
+    transform: scale(0.90);
 }
